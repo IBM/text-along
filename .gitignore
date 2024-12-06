@@ -1,0 +1,41 @@
+# Hidden files
+.DS_Store
+.ipynb_checkpoints
+.env
+.vscode
+*.idea
+*.ckpt
+
+# Pycache
+__pycache__
+__MACOSX
+
+
+# Temp files, logs, zips and models
+*tmp
+*.log
+*.zip
+venv
+/t4jbias-backend/tmi/readability-api/node_modules/
+lightning_logs
+bias_data
+cache
+*.pkl
+models/
+condam1.yaml
+
+# Exclude CoreNLP Module
+stanford-corenlp*
+t4jbias-backend/bias_tagger_detection/model_out*
+t4jbias-backend/bias_tagger_detection/output-*
+t4jbias-backend/build_db.py
+t4jbias-backend/bias_tagger_detection/download_data_and_run_training.sh
+stereotype-models
+data/jupyter_notebook_config.json
+data/nltk_data
+t4jbias-backend/bias_tagger_detection/data/nltk_data
+t4jbias-backend/bias_tagger_detection/out
+data/stanfordnlp/en_ewt_models/*
+result_plots/*
+*.egg-info
+results.txt

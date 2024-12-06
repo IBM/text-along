@@ -1,0 +1,70 @@
+// RESET BROWSER SETTINGS
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// GENERAL CONTENT
+body {
+  box-sizing: border-box;
+}
+
+.hyperlink-container {
+  min-width: 15rem;
+  text-decoration: none;
+}
+
+.hyperlink {
+  display: flex;
+  margin-top: $layout-02;
+  margin-bottom: $layout-03;
+  cursor: pointer;
+
+  &__icon {
+    margin-right: $spacing-02;
+  }
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__icon {
+    &--small {
+      width: 4rem;
+      height: 4rem;
+      margin: 1rem;
+    }
+
+    &--large {
+      width: 6rem;
+      height: 6rem;
+      margin: 2rem;
+
+      @include responsive(small-height) { 
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+.bx--batch-summary__cancel {
+  text-transform: capitalize;
+}
+
+.navigation-buttons__container {
+  position: fixed;
+
+  @include responsive(small-height) { 
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

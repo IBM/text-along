@@ -1,0 +1,15 @@
+.progress-bar-container {
+  width: 100%;
+  position: absolute;
+  bottom: 6rem;
+
+  .progress-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include responsive(small-height ) { 
+    display: none;
+  }
+}

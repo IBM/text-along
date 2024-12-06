@@ -1,0 +1,65 @@
+@import '@carbon/type/scss/type';
+@import '@carbon/type/scss/font-face/mono';
+@import '@carbon/type/scss/font-face/sans';
+@include carbon--type-reset();
+@include carbon--font-face-mono();
+@include carbon--font-face-sans();
+
+.container {
+  font-family: carbon--font-family('sans');
+
+  h1 {
+    @include header-1;
+    color: $text-01;
+  }
+  small{
+    font-size: x-small;
+  }
+  
+
+  h2 {
+    @include header-2;
+    color: $text-01;
+  }
+
+  h3 {
+    @include header-3;
+    color: $text-01;
+  }
+
+  p {
+    @include para-short;
+    color: $text-01;
+  }
+  
+  .header--bold {
+    font-weight: 600 !important;
+  }
+
+  .g-header-text {
+    &__para {
+      margin-top: $spacing-03;
+      margin-bottom: $layout-02;
+    }
+  }
+  .bx--text-input:disabled{
+    color:#161616 !important;
+    cursor:default !important;
+    -webkit-text-fill-color: #161616 !important;
+  }
+  .bx--label--disabled{
+    color:#161616 !important;
+  }
+  .bx--file--label{
+    color:#525252!important;
+    font-weight:400!important;
+    line-height:1rem!important;
+    font-size: 0.75rem!important;
+  }
+  .bx--label-description{
+    color:#525252!important;
+    font-weight:400!important;
+    line-height:1rem!important;
+    font-size: 0.7rem!important;
+  }
+}
