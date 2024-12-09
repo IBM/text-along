@@ -19,3 +19,7 @@ Andrews, Kenya S., and Lamogha Chiazor. (2024) “Epistemological Bias As a Mean
 [GitHub Pages](https://ibm.github.io/text-along/)
 
 Instructions for running the installation can be found [here](https://github.com/IBM/text-along/blob/main/t4jbias-backend/README.md).
+
+## **To Contibute**
+Contributions and improvements are highly welcome.
+To contribute to this project, please follow the guidiance as described in our [CONTRIBUTING information](https://github.com/IBM/text-along/blob/main/CONTRIBUTING.md) page. Thanks
