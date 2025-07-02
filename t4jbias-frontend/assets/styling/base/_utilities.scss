@@ -1,0 +1,54 @@
+// MARGIN BOTTOM
+.u-margin-bottom-tiny {
+  margin-bottom: $spacing-03 !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: $layout-03 !important;
+}
+
+// MARGIN TOP
+.u-margin-top-small {
+  margin-top: $layout-02 !important;
+  
+  @include responsive(small-height) { 
+    margin-top: $layout-01 !important;
+  }
+}
+
+.u-margin-top-medium {
+  margin-top: $layout-03 !important;
+
+  @include responsive(small-height) { 
+    margin-top: $layout-01 !important;
+  }
+}
+
+.u-margin-top-large {
+  margin-top: $layout-05 !important;
+
+  @include responsive(small-height) { 
+    margin-top: $layout-02 !important;
+  }
+}
+
+.u-margin-top-big {
+  margin-top: $layout-07 !important;
+
+  @include responsive(small-height) { 
+    margin-top: $layout-03 !important;
+  }
+}
+
+// OTHER
+.u-para-height-small {
+  height: 10rem;
+}
+
+.bx--select-input{
+  width:27rem !important;
+}
+
+.bank_form{
+  width:27rem !important;
+}

@@ -1,0 +1,97 @@
+{
+  "name": "Tech4Justice",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "dev-debug": "node --inspect node_modules/.bin/nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "watch": "npm-watch",
+    "jest": "jest",
+    "all": "nightwatch --env default,firefox, safari",
+    "all-headless": "nightwatch --env headlessChrome,headlessFirefox",
+    "chrome": "nightwatch",
+    "chrome-headless": "nightwatch --env headlessChrome",
+    "firefox": "nightwatch --env firefox",
+    "firefox-headless": "nightwatch --env headlessFirefox",
+    "safari": "nightwatch --env safari"
+  },
+  "overrides": {
+    "glob-parent": {
+      ".": "5.1.2"
+    },
+    "nth-check": {
+      ".": "2.0.1"
+    },
+    "chokidar": {
+      ".": "3.5.3"
+    }
+  },
+  "dependencies": {
+    "@carbon/icons-vue": "^10.45.0",
+    "@carbon/themes": "^10.49.0",
+    "@carbon/type": "^10.40.0",
+    "@carbon/vue": "^2.40.0",
+    "@ibm-cloud/cloudant": "^0.1.3",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/proxy": "^2.1.0",
+    "axios": "^0.25.0",
+    "body-parser": "^1.19.1",
+    "carbon-components": "^10.51.0",
+    "cfenv": "^1.2.4",
+    "connect-redis": "^6.0.0",
+    "core-js": "^3.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.2",
+    "h5wasm": "^0.3.1",
+    "http-proxy-middleware": "^2.0.6",
+    "ibmcloud-appid": "^6.2.3",
+    "lodash": "^4.17.21",
+    "node-sass": "^7.0.1",
+    "npm-watch": "^0.11.0",
+    "nuxt": "^2.15.8",
+    "passport": "^0.6.0",
+    "passport-openidconnect": "^0.1.1",
+    "redis": "^4.0.2",
+    "sass": "^1.49.0",
+    "sass-loader": "^10",
+    "vue-highlightable-input": "^1.0.9",
+    "vue-resource": "^1.5.3",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.10",
+    "@babel/preset-env": "^7.16.10",
+    "@vue/babel-preset-app": "^4.5.15",
+    "@vue/cli": "^5.0.4",
+    "@vue/test-utils": "^1.3.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^27.4.6",
+    "chromedriver": "100.0.0",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.7.0",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-vue": "^8.3.0",
+    "geckodriver": "^3.0.1",
+    "jest": "^27.5.1",
+    "jest-serializer-vue": "^2.0.2",
+    "jsdom-global": "^3.0.2",
+    "moxios": "^0.4.0",
+    "nightwatch": "^1.7.13",
+    "puppeteer": "^13.4.1",
+    "selenium-server": "^3.141.59",
+    "vue-jest": "^3.0.7"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx,vue,scss"
+    }
+  }
+}

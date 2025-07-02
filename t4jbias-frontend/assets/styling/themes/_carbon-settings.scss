@@ -1,0 +1,11 @@
+// UI Shell - Header and sidebar element
+// Grid 16 tells carbon to use 16 columns rather than 12 columns (older style)
+$feature-flags: (
+  ui-shell: true,
+  grid-columns-16: true,
+);
+
+// Use the Gray10 Theme
+@import '~@carbon/themes/scss/themes';
+$carbon--theme: $carbon--theme--g10;
+@include carbon--theme();

@@ -1,0 +1,13 @@
+.container {  
+  background: $ui-background;
+  min-height: 100vh;
+
+  .page-content {
+    position: relative;
+    margin-top: 47px;
+    min-height: calc(100vh - 47px);
+    padding: 0px;
+    display: block;
+    width: 100%;
+  }
+}

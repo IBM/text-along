@@ -1,0 +1,5 @@
+Acknowledgement for: bias-lexicon.txt
+     
+     Marta Recasens, Cristian Danescu-Niculescu-Mizil, and Dan
+     Jurafsky. 2013. Linguistic Models for Analyzing and Detecting Biased
+     Language. Proceedings of ACL 2013.

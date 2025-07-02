@@ -1,0 +1,39 @@
+// TEXT STYLES
+@mixin header-1 {
+  @include carbon--type-style('productive-heading-05');
+}
+
+@mixin header-2 {
+  @include carbon--type-style('productive-heading-03');
+}
+
+@mixin header-3 {
+  @include carbon--type-style('productive-heading-02');
+}
+
+@mixin para-short {
+  @include carbon--type-style('body-short-01');
+}
+
+@mixin para-long {
+  @include carbon--type-style('body-long-01');
+}
+
+// RESPONSIVE DESIGN
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 600px) { @content };
+  }
+
+  @if $breakpoint == small-screen {
+    @media only screen and (max-width: 1050px) { @content };
+  }
+
+  @if $breakpoint == large-screen {
+    @media only screen and (min-width: 1800px) { @content };
+  }
+
+  @if $breakpoint == small-height {
+    @media only screen and (max-height: 800px) { @content };
+  }
+}

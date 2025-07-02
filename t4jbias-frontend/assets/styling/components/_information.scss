@@ -1,0 +1,9 @@
+.information {
+    display: flex;
+    padding-bottom: 0px;
+
+    &__title {
+        padding-right: $spacing-03;
+    }
+
+}

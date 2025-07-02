@@ -1,0 +1,564 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.2.0, furo 2021.09.22"/>
+        <title>Media_Bias-T4J documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=150e365fa939648e89c22f6d7d13c72a1657915a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="#"><div class="brand">Media_Bias-T4J  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+  
+  
+  <span class="sidebar-brand-text">Media_Bias-T4J  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="welcome-to-media-bias-t4j-s-documentation">
+<h1>Welcome to Media_Bias-T4J’s documentation!<a class="headerlink" href="#welcome-to-media-bias-t4j-s-documentation" title="Permalink to this headline">¶</a></h1>
+<section id="too-much-information-preliminary-experiment">
+<h2>Too Much Information Preliminary Experiment<a class="headerlink" href="#too-much-information-preliminary-experiment" title="Permalink to this headline">¶</a></h2>
+<section id="module-t4jbias-backend.tmi.tmi_logic">
+<span id="main-dataframe-experiment"></span><h3>Main Dataframe Experiment<a class="headerlink" href="#module-t4jbias-backend.tmi.tmi_logic" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">t4jbias-backend.tmi.tmi_logic.</span></span><span class="sig-name descname"><span class="pre">TMIAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article_dictionary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class contains multiple methods to perfrom an analysis in order to find out
+whether or not too much information is given about a specific subject.
+All methods can be invoked indepedently from each other and manipulate the class’s dataframe.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.account_for_positively_biased">
+<span class="sig-name descname"><span class="pre">account_for_positively_biased</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">9000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.account_for_positively_biased" title="Permalink to this definition">¶</a></dt>
+<dd><p>The established bias from the function “is_biased_from_descriptor” automatically
+labels every headline having more than 2 descriptors as Negatively biased.
+However, there might be cases where a headline has more than 2 descriptors but
+is positively biased. To distinguish this case, a CoreNLP sentiment analysis
+is performed on any sentence containing more than 2 descriptors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – Port the CoreNLP server is running on, defaults to 9000</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.article_length_mediatype_correlation">
+<span class="sig-name descname"><span class="pre">article_length_mediatype_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article_types</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.article_length_mediatype_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the relationship between the type of newspaper (print/online media and online only media)
+and the overall article length. The returned arguments can be used for plotting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>article_types</strong> (<em>list</em>) – An ordered list of strings containing the type of news_outlet for the corresponding row.
+String is either “online” or “print”.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns three lists. 1: X-Axis Values 2: Standard error for online &amp; print, 3: Averages of word length for online &amp; print</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[list, list, list]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.descriptors_headline">
+<span class="sig-name descname"><span class="pre">descriptors_headline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">9000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.descriptors_headline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the descriptor count and name as columns to dataframe. Classified as descriptor is any node left
+on an “NN” that is also a parent of the same “NP” node. Exceptions include english stopwords.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – Port the CoreNLP server is running on, defaults to 9000</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.extract_subject_object_action">
+<span class="sig-name descname"><span class="pre">extract_subject_object_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.extract_subject_object_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracting the subject, object and action from the headline using Watson NLP.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.filter_out_articles">
+<span class="sig-name descname"><span class="pre">filter_out_articles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.filter_out_articles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter out all articles that are not recognised as the category string by Watson.
+Applicable categories can be found at: <a class="reference external" href="https://cloud.ibm.com/docs/natural-language-understanding?topic=natural-language-understanding-categories-hierarchy-v1">https://cloud.ibm.com/docs/natural-language-understanding?topic=natural-language-understanding-categories-hierarchy-v1</a>
+E.g. “/society/crime”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>category</strong> (<em>str</em>) – Category that should NOT be filtered out.</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.find_ethnicity_keywords">
+<span class="sig-name descname"><span class="pre">find_ethnicity_keywords</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.find_ethnicity_keywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds count of specific ethnic keywords in article text as a new column.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.get_entities">
+<span class="sig-name descname"><span class="pre">get_entities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.get_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the entities in an article from Watson NLU.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.get_img_caption_byline_excerpt">
+<span class="sig-name descname"><span class="pre">get_img_caption_byline_excerpt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8080</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.get_img_caption_byline_excerpt" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Retrieves the image caption (if available), byline and excerpt from the article.</p>
+</div></blockquote>
+<p>!Important!: NodeJS API needs to be started locally. (Located in “./readability-api”)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>api_port</strong> (<em>int</em><em>, </em><em>optional</em>) – Port the NodeJS API is running on, defaults to 8080</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.hedges_booster_factiveverbs">
+<span class="sig-name descname"><span class="pre">hedges_booster_factiveverbs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.hedges_booster_factiveverbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds hedges,  boosters and factive verb counts as individual columns to the dataframe.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.is_biased_from_descriptor">
+<span class="sig-name descname"><span class="pre">is_biased_from_descriptor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.is_biased_from_descriptor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether or not headline is biased based from count of descriptors.
+Rules: &lt; 2 descriptors  -&gt; Positive (not biased/TLI)</p>
+<blockquote>
+<div><p>== 2 descriptors -&gt; Neutral (not biased)
+&gt; 2 descriptors  -&gt; Negative (biased / TMI)</p>
+</div></blockquote>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.is_subject_entity_person">
+<span class="sig-name descname"><span class="pre">is_subject_entity_person</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.is_subject_entity_person" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the subject mentioned in the headline an entitiy of type person?
+Determined using Watson NLP’s entities.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.is_subject_in_headline">
+<span class="sig-name descname"><span class="pre">is_subject_in_headline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.is_subject_in_headline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines for each row whether a subject is present in the corresponding headline.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.object_correspond_context">
+<span class="sig-name descname"><span class="pre">object_correspond_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.object_correspond_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the object in the headline equal the context of the headline?
+E.g. “Daycare Worker charged with murder after assaulting baby who wouldn’t nap, cops say”
+The object (murder) == context (murder)
+An object not corresponding to the context might be a sign of framing bias. E.g. the object
+is the age of the murderer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<em>str</em>) – The context for the analysis. Usually aligns with the keyword searched for
+with BingAPI.</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.object_subject_mention_imagecaptions">
+<span class="sig-name descname"><span class="pre">object_subject_mention_imagecaptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.object_subject_mention_imagecaptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the subject / object or both are mentioned in the headline.
+Adds new column with S = subject in headline, O = object in headline, S/O = Subject&amp;Object in headline.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_logic.TMIAnalysis.political_spectrum">
+<span class="sig-name descname"><span class="pre">political_spectrum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_logic.TMIAnalysis.political_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the political spectrum of the specific newspaper outlet using information provided by the
+website “www.allsides.com”.</p>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-t4jbias-backend.tmi.tmi_utils">
+<span id="tmi_utils-for-experiment"></span><h3>Helperfunctions for Experiment<a class="headerlink" href="#module-t4jbias-backend.tmi.tmi_utils" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.DescriptorAnalysis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">t4jbias-backend.tmi.tmi_utils.</span></span><span class="sig-name descname"><span class="pre">DescriptorAnalysis</span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.DescriptorAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performing a Descriptor Analysis.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.DescriptorAnalysis.get_descriptor_count">
+<span class="sig-name descname"><span class="pre">get_descriptor_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.DescriptorAnalysis.get_descriptor_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves descriptor count for given headline, as well as the descriptor names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>headline</strong> (<em>str</em>) – Headline of the newspaper article.</p></li>
+<li><p><strong>port</strong> (<em>int</em>) – Port the CoreNLP server is started on.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ApiNotStarted</strong> – In case the user forgot to start the CoreNLP server.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the count of descriptors as an integer, as well as the
+list of descriptors.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[int, list]</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">t4jbias-backend.tmi.tmi_utils.</span></span><span class="sig-name descname"><span class="pre">Helperfunctions</span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains general tmi_utils for performing a TMI Analysis.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions.corenlp_sentiment_analysis">
+<span class="sig-name descname"><span class="pre">corenlp_sentiment_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions.corenlp_sentiment_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the overall sentiment of a sentence via CoreNLP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>headline</strong> (<em>str</em>) – Sentence or headline to be analysed.</p></li>
+<li><p><strong>port</strong> (<em>int</em>) – Port on which CoreNLP server is running on.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ApiNotStarted</strong> – Raised if user forgot to start CoreNLP server.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the score for sentiment ranging from 0(Very negative) to 4 (Very positive).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_NLU_categories">
+<span class="sig-name descname"><span class="pre">get_NLU_categories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_newspaper</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_NLU_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Classifies newspaper article into predefined categories by Watson NLU.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url_newspaper</strong> (<em>str</em>) – URL of newspaper article.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dict containing any classified category.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_NLU_semanticroles">
+<span class="sig-name descname"><span class="pre">get_NLU_semanticroles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline_newspaper</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_NLU_semanticroles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the semantic roles for a newspaper article from Watson NLU.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>headline_newspaper</strong> (<em>str</em>) – Headline for the newspaper to be analysed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Retrieved dictionary that contains any semantic roles in the headline.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_descriptor_sentiment">
+<span class="sig-name descname"><span class="pre">get_descriptor_sentiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">descriptor_count</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_descriptor_sentiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the sentiment of descriptors solely based on the count of descriptors in the healdine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>descriptor_count</strong> (<em>int</em>) – Count of descriptors in headline.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns any sentiment from [“Positive”, “Neutral”, “Negative”]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_image_tags">
+<span class="sig-name descname"><span class="pre">get_image_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_image_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the image tags, byline and excerpt from an article.
+This is done by calling a NodeJS Api which utilises the “readibility” package
+published by Mozilla Firefox. This clears the article’s HTML of any advertisements that
+might mislead the analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – URL of the newspaper article.</p></li>
+<li><p><strong>port</strong> (<em>int</em>) – Port that NodeJS API is running on.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ApiNotStarted</strong> – Raised if user forgot to start the NodeJS API.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the list of image captions retrieved as well as the byline and excerpt.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[list, str, str]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_political_spectrum">
+<span class="sig-name descname"><span class="pre">get_political_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">news_outlet</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions.get_political_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Web crawler for retrieving political spectrum of a given newspaper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>news_outlet</strong> (<em>str</em>) – Name of the newspaper.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String of political direction. Possible returns: [Left, Lean Left, Center, Lean Right, Right]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="t4jbias-backend.tmi.tmi_utils.Helperfunctions.return_nltk_tree">
+<span class="sig-name descname"><span class="pre">return_nltk_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentence</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">9000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">nltk.tree.Tree</span></span></span><a class="headerlink" href="#t4jbias-backend.tmi.tmi_utils.Helperfunctions.return_nltk_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the NLTK tree of sentence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> (<em>str</em>) – Sentence to retrieve NLTK tree from.</p></li>
+<li><p><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – Port CoreNLP server is running on, defaults to 9000</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ApiNotStarted</strong> – Raised if you user forgot to start the server.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NLTK tree of sentence.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tree</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, Luca Weissbeck, Ayobami Bolaji |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="_sources/index.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Welcome to Media_Bias-T4J’s documentation!</a><ul>
+<li><a class="reference internal" href="#too-much-information-preliminary-experiment">Too Much Information Preliminary Experiment</a><ul>
+<li><a class="reference internal" href="#module-t4jbias-backend.tmi.tmi_logic">Main Dataframe Experiment</a></li>
+<li><a class="reference internal" href="#module-t4jbias-backend.tmi.tmi_utils">Helperfunctions for Experiment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/main.js"></script>
+    </body>
+</html>

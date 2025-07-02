@@ -1,0 +1,24 @@
+.navigation-buttons {
+  &__button {
+    min-width: 12.5rem;
+    bottom: 0px;
+    position: fixed;
+    text-transform: capitalize;
+
+    @include responsive(small-height) { 
+      position: relative;
+    }
+
+    &--right {
+      right: 0px;
+    }
+
+    &--left {
+      left: calc(100% - 25rem);
+      
+      @include responsive(small-height) { 
+        left: 0;
+      }
+    }
+  }
+}
