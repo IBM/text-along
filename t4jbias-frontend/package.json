@@ -41,7 +41,7 @@
     "axios": "^0.25.0",
     "body-parser": "^1.19.1",
     "carbon-components": "^10.51.0",
-    "cfenv": "^1.2.4",
+    "cfenv": "^1.2.7",
     "connect-redis": "^6.0.0",
     "core-js": "^3.20.3",
     "cors": "^2.8.5",
@@ -81,7 +81,7 @@
     "jest-serializer-vue": "^2.0.2",
     "jsdom-global": "^3.0.2",
     "moxios": "^0.4.0",
-    "nightwatch": "^1.7.13",
+    "nightwatch": "^3.16.0",
     "puppeteer": "^13.4.1",
     "selenium-server": "^3.141.59",
     "vue-jest": "^3.0.7"
