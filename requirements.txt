@@ -19,7 +19,7 @@ torch==2.13.0
 pytorch-pretrained-bert==0.6.2
 regex==2024.9.11
 scikit-learn==1.5.2
-sentence-transformers==3.1.0
+sentence-transformers==5.6.0
 simplediff==1.1
 spacytextblob==4.0.0
 typer==0.12.5
